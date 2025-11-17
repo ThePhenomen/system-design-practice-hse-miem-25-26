@@ -59,7 +59,7 @@ services:
     image: grafana/k6:latest
     volumes:
       - ./k6/scripts:/scripts
-    command: run --out experimental-prometheus-rw /scripts/load-script.js
+    command: run --out experimental-prometheus-rw /scripts/custom-load-script.js
     ports:
       - "6565:6565"
     environment:

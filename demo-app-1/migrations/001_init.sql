@@ -12,3 +12,8 @@ CREATE TABLE IF NOT EXISTS orders (
     description TEXT,
     created_at TIMESTAMP WITH TIME ZONE DEFAULT now()
 );
+
+INSERT INTO users (id, name, email) VALUES
+(1, 'Test User 1', 'user1@test.com'),
+(2, 'Test User 2', 'user2@test.com')
+ON CONFLICT (email) DO NOTHING;
